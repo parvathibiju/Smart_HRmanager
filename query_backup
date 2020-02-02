@@ -1,0 +1,58 @@
+create database Project;
+use Project;
+create table employee(employee_id varchar(5),first_name varchar(20),middle_name varchar(20),last_name varchar(20),dob date,email varchar(50),gender varchar(10),blood_group varchar(4),doj date,years_of_experience numeric(2,0),apartment_no varchar(20), area_location varchar(20),pin_no numeric(10),primary key(employee_id), foreign key pin_no(pin_no) references city(pin_no));
+desc employee;
+create table phone(employee_id varchar(5),phone_number numeric(12),primary key(phone_number),foreign key employee_id(employee_id) references employee(employee_id));
+create table qualification(employee_id varchar(5), qualification varchar(50) not null,foreign key employee_id(employee_id) references employee(employee_id));
+create table skillset(skill_id varchar(5),skill_name varchar(50),primary key (skill_id));
+create table awards (employee_id varchar(5), award_name varchar(50),foreign key employee_id(employee_id) references employee(employee_id));
+create table project (project_id varchar(5),project_name varchar(50),manager_id varchar(5),primary key (project_id));
+create table partof (employee_id varchar(5),project_id varchar(5),foreign key employee_id(employee_id) references employee(employee_id),foreign key project_id(project_id) references project(project_id));
+create table work_hours (employee_id varchar(5),date_ date,in_time time,out_time time,primary key (employee_id,date_),foreign key employee_id(employee_id) references employee(employee_id));
+create table has_skillset (employee_id varchar(5),skill_id varchar(5),primary key(employee_id,skill_id),foreign key employee_id(employee_id) references employee(employee_id),foreign key skill_id(skill_id) references skillset(skill_id));
+create table temporary_(employee_id varchar(5),contractperiodmonths numeric(2,0),foreign key employee_id(employee_id) references employee(employee_id));
+create table permanent (employee_id varchar(5),comp_ins_id varchar(5),primary key (comp_ins_id),foreign key employee_id(employee_id) references employee(employee_id));
+create table city(pin_no numeric(10), city varchar(30) , state varchar (30),primary key(pin_no));
+show tables ;
+alter table employee add pin_no numeric (10) ;
+alter table employee drop pin;
+alter table employee drop state;
+area_loaction varchar(60), city varchar(30), pin_no numeric(10), state varchar (30);
+select * from work_hours;
+drop table phone;
+desc employee;
+desc skillset;
+desc workhours;
+insert into phone('10010',943759459223);
+select employee_id,first_name, skill_name 
+from employee natural join has_skillset natural join skillset
+where employee_id=10001 or employee_id=10007
+order by employee_id;
+select * from skillset;
+select employee_id, first_name,skill_name , city
+from employee natural join skillset natural join has_skillset natural join city
+where employee_id=10003  and city ='Vatican city';
+select employee_id,first_name,last_name,qualification,skill_name from 
+employee natural join has_skillset natural join skillset natural join
+ partof natural join qualification where employee_id =10007 or employee_id=10003 or employee_id=10001;
+
+select * from employee;
+
+select employee_id,date_,period 
+from(select employee_id,date_, timediff(out_time,in_time) as period from work_hours )
+ as table1 ;
+
+select employee_id, first_name 
+from employee where pin_no in
+(select pin_no from city )  ;
+
+
+select first_name,last_name,gender,dob,blood_group,phone_number,city from employee natural join phone natural join city;
+
+commit;
+
+SHOW GLOBAL VARIABLES LIKE 'PORT';
+drop database Project;
+
+select employee_id,first_name,last_name,email,qualification,phone_number,project_name from employee natural join phone natural join project natural join partof natural join qualification;
+select employee_id,first_name,last_name,email,qualification,phone_number,project_name from employee natural join phone natural join project natural join partof natural join qualification where employee_id =10001;
