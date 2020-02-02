@@ -1,0 +1,74 @@
+<html>
+  <head>
+      <style>
+          .bt1{
+            border-radius: 2rem;
+            font-size: 25px;
+            letter-spacing: 2px;
+            margin: 5px;
+            padding: 7px 10px;
+            fill-opacity: 0.77;
+            border: none ; 
+            color :rgb(19, 11, 1);
+            background-color: rgb(245, 241, 236);
+            opacity: 0.4;
+          
+          }
+          #bt3{
+                    border-radius: 2rem;
+                    font-size: 25px;
+                    letter-spacing: 2px;
+                    margin: 5px;
+                    padding: 7px 10px;
+                    fill-opacity: 0.77;
+                    border: none ; 
+                    color :rgb(19, 11, 1);
+                    background-color: rgb(230, 208, 16);
+                    opacity: 0.2;
+                  
+                  }
+          #a{
+            padding: 60pt;
+              background-image:url("/static/b1.jpg")
+          }
+          #b{
+              color:  rgb(236, 154, 59);
+              font-family: 'Times New Roman', Times, serif;
+          }
+          #x{
+              font-family: cursive;
+              color:azure;
+              font-size: 25pt;
+          
+          }
+          </style>
+  </head>
+  <body id="a">
+<div id="s1" align="center">
+  <br><br>
+
+                <br/>
+                <p id="x"> Welcome Employee {{usr}}</p>
+                <br/>
+
+                <form action="/pers_deet" method="POST"><input type="submit" class="bt1" value="Personal Details" /> 
+                <input type="hidden" value="{{usr}}" name="pers_deet"></input></form>
+                 <br/>
+                 <form action="/prof_deet" method="POST"><input type="submit" class="bt1" value="Professional Details" /> 
+                <input type="hidden" value="{{usr}}" name="prof_deet"></input></form>
+                 <br/>
+                 <form action="/attend"   method="POST">
+               <input type="submit" class="bt1" value="Attendance" /> 
+                <input type="hidden" value="{{usr}}" name="emp"></input></form>
+                 <br/>
+
+                 <form action="/home"  >
+                  <input align="center" id="bt3" type="submit" value="LOGOUT" /> 
+                   <input type="hidden" value="root" name="username"></input>
+                   <input type="hidden" value="root" name="password"></input></form>
+                    <br/>
+                    
+               
+            </div>
+          </body>
+</html>

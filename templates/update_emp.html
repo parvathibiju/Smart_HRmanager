@@ -1,0 +1,84 @@
+<html>
+        <head>
+                        <style>
+                                        #bt1{
+                                          border-radius: 2rem;
+                                          font-size: 12px;
+                                          letter-spacing: 2px;
+                                          margin: 5px;
+                                          padding: 7px 10px;
+                                          fill-opacity: 0.77;
+                                          border: none ; 
+                                          color :rgb(19, 11, 1);
+                                          background-color: rgb(245, 241, 236);
+                                          opacity: 0.4;
+                                        
+                                        }
+                                        .a{
+                                          
+                                            background-image:url("/static/b2.jpg");
+                                            background-size:cover;
+                                            height: 100%;
+                                        }
+                                        #b{
+                                            color:  rgb(236, 154, 59);
+                                            font-family: 'Times New Roman', Times, serif;
+                                        }
+                                        #x{
+                                            font-family: cursive;
+                                            color:azure;
+                                            font-size: 25pt;
+                                        
+                                        }
+                                        #bt2{
+                    border-radius: 2rem;
+                    font-size: 10px;
+                    letter-spacing: 2px;
+                    margin: 5px;
+                    padding: 7px 10px;
+                    fill-opacity: 0.77;
+                    border: none ; 
+                    color :rgb(19, 11, 1);
+                    background-color: rgb(238, 234, 230);
+                    opacity: 1;
+                  
+                  }
+                                        </style>
+        </head>
+
+    <div class="a"id="s1">
+        <h1 align ='center'>  <text id='a'>UPDATION OF EMPLOYEE DETAILS</text  ></h1>
+         
+                <form action="/update_ph"  method="POST"> 
+                        <h2>PHONE NUMBER</h2>
+                        Employee ID : <input id="bt2" type="text"  name="id_"  />
+                        <br></br> Phone number : <input id="bt2" type="numeric"  name="phone" />
+                        <input id="bt1" type="submit" value="Add Phone number" />
+                        </form>
+        
+        <br><BR><BR>
+        
+        
+                <form align="right" action="/update_qual"  method="POST"> 
+                        <h2>QUALIFICATION</h2>
+                        Employee ID : <input id="bt2" type="text"  name="id_"  />
+                        <br></br><input id="bt1" type="submit" value="Update Qualification" />
+                         Qualification : <input id="bt2" type="text"  name="qual"/>
+                        
+                        </form>
+        
+        
+                        <br><BR><BR>
+        
+        
+                <form action="/update_sk"  method="POST"> 
+                        <h2>SKILLS</h2>
+                        
+                        Employee ID : <input id="bt2" type="text"  name="id_"  />
+                        <br></br> Skills : <input id="bt2" type="text"  name="sk"/>
+                        <input id="bt1" type="submit" value="Update Skills" />
+                        </form>
+                       
+                    </div>
+                
+</html>

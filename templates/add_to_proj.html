@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <style>
+            .a{
+                      
+                      background-image:url("/static/b6.jpg");
+                      background-size:cover;
+                      height: 100%;
+                  }
+
+                  #x{
+                                            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                                            color:rgb(4, 36, 36);
+                                            font-size: 25pt;
+                                        
+                                        }
+
+                                        #bt1{
+                      border-radius: 2rem;
+                      font-size: 22px;
+                      letter-spacing: 2px;
+                      margin: 5px;
+                      padding: 7px 10px;
+                      fill-opacity: 0.77;
+                      border: none ; 
+                      color :rgb(19, 11, 1);
+                      background-color: rgb(223, 216, 208);
+                      opacity: 1;
+                    
+                    }
+        </style>
+    </head>
+
+    <div class="a">
+        <h1 align ='center'>  <text id='x'>UPDATING PROJECT DETAILS</text  ></h1>
+         <br><br><BR>
+                <form align="center" id="x" action="/update_proj"  method="POST"> 
+                        
+                        Employee ID : <input type="text"  name="id_"  />
+                        <br></br> Project_id : <input type="numeric"  name="proj" />
+                        <br><BR> <br><BR> <br><BR> <br><BR>
+                        <input id="bt1" type="submit" value="Add Employee to Project" />
+                        </form>
+        
+        <br><BR><BR>
+        
+        
+                
+                
+</html>

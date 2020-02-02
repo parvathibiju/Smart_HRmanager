@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+        <style>
+
+                table {
+                    font-family: arial, sans-serif;
+                    border-collapse: collapse;
+                    width: 100%;
+                    border-block-color: white;
+                    border: 23px black;
+                    padding: 60pt;
+                
+
+                }
+                td, th {
+                    border: 23px ;
+                    text-align: left;
+                    padding: 20pt;
+                    
+                }
+                tr:nth-child(even) {
+                    background-color:lavender;
+                }
+                tr:nth-child(odd){
+                    background-color:lavenderblush;
+                    
+                }
+                #f{
+                    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                    color:rgb(17, 28, 32);
+                          background-image:url("/static/bluebg.jpg");
+                          border-left: 200pt;
+                          background-size: 100%;
+                          background-position:top;
+                          font-size: 22px;
+                          font-weight:600;
+                          padding: 200pt;
+                
+                
+                }
+
+                #e1{
+          border-radius: 2rem;
+          padding: 7px 10px;
+          width: 400px;
+          align-content : center;
+          align-self: center;
+          align-items: center;
+        }
+                
+                
+                </style>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Employees</title>
+</head>
+<body>
+<table id="employees" style="width:100%">
+    {% if result %}
+    <tr>
+        <th>EID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Date of Birth</th>
+        <th>gender</th>
+        <th>blood_group</th>
+        <th>phone</th>
+        <th>city</th>
+        
+
+
+
+
+        
+    </tr>
+    {% for row in result %}
+    <tr>
+        <td> {{row.employee_id}}</td>
+        <td> {{ row.first_name }}</td>
+        <td> {{ row.last_name }}</td>
+        <td> {{ row.dob }}</td>
+        <td> {{ row.gender }}</td>
+        <td> {{ row.blood_group }}</td>
+        <td> {{ row.phone_number }}</td>
+        <td> {{ row.city }}</td>
+    </tr>
+    {% endfor %}
+    {% endif %}
+</table>
+<BR><BR><BR>
+    <form action="/login" method="POST" >
+        <input align="center" id="e1" type="submit" value="Go to home page" /> 
+         <input type="hidden" value="root" name="username"></input>
+         <input type="hidden" value="root" name="password"></input></form>
+          <br/>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+        <title>Employees</title>
+    </head>
+    <body>
+    <table id="employees" style="width:100%">
+        {% if result %}
+        <tr>
+            <th>EID</th>
+            <th>phone</th>
+            <th>project</th>
+    
+            
+        </tr>
+        {% for row in result %}
+        <tr>
+            <td> {{row.employee_id}}</td>
+            <td> {{ row.phone_number }}</td>
+            <td> {{ row.project_name }}</td>
+        </tr>
+        {% endfor %}
+        {% endif %}
+    </table>
+
+    <form action="/login" method="POST" >
+        <input align="center" id="e1" type="submit" value="Go to home page" /> 
+         <input type="hidden" value="root" name="username"></input>
+         <input type="hidden" value="root" name="password"></input></form>
+          <br/>
+</html>

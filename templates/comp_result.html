@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    padding: 25px;
+    
+}
+td, th {
+    
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+tr:nth-child(odd) {
+    background-color: #dddddd;
+}
+table {
+    float:left;
+    
+}
+
+.def{
+          background-image:url("/static/brown.jpg");
+          background-size:cover;
+          background-position:top; 
+          table-layout: auto;    
+        
+        }
+        #ti{
+         color: rgb(207, 187, 187);
+          font-family: cursive;
+          text-shadow: 3px 3px 6px #bd7707;
+          font-size:275%;
+          opacity: 0.45;
+          position:middle;
+        }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>Employees</title>
+</head>
+<h1 id="ti" align="center">Compared Result </h1>
+<body class="def">
+    <div class="employees">
+<table id="employees" style="width:100%">
+    {% if result1_1 %}
+    {% if result2_1 %}
+    {% if result3_1 %}
+    <tr>
+        <th>EID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        
+    </tr>
+    {% for row in result1_1 %}
+    <tr>
+        <td> {{row.employee_id}}</td>
+        <td> {{ row.first_name }}</td>
+        <td> {{ row.last_name }}</td>
+        
+    </tr>
+    {% endfor %}
+    {% for row in result2_1 %}
+    <tr>
+        <td> {{row.employee_id}}</td>
+        <td> {{ row.first_name }}</td>
+        <td> {{ row.last_name }}</td>
+        
+    </tr>
+    {% endfor %}
+    {% for row in result3_1 %}
+    <tr>
+        <td> {{row.employee_id}}</td>
+        <td> {{ row.first_name }}</td>
+        <td> {{ row.last_name }}</td>
+        
+    </tr>
+    {% endfor %}
+    {% endif %}
+    {% endif %}
+    {% endif %}
+</table>
+</div>
+<br><br><br><br><BR>
+<div class="qualification">
+        <br><br><br><br><BR>
+    <h4 align="center" ><font color="beige" size="5pt">Qualifications</font></h4><br><br>
+<table id=qualification1 style="width:33%">
+    <tr>
+        <th>EID={{emp1}}</th>
+    </tr>
+
+    {% for row1 in  result1_2%}
+    <tr>
+        <td> {{ row1.qualification }}</td>
+    </tr>
+    {% endfor %}
+</table>
+<table id=qualification2 style="width:33%">
+        <tr> 
+            <th>EID={{emp2}}</th> 
+        </tr>
+        {% for row1 in  result2_2%}
+        <tr>
+            <td> {{ row1.qualification }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+        <table id=qualification3 style="width:33%">
+                
+                <tr>
+                   
+                    <th>EID={{emp3}}</th>
+                    
+                    
+                    
+                </tr>
+                {% for row1 in  result3_2%}
+                <tr>
+                    
+                    <td> {{ row1.qualification }}</td>
+                    
+                </tr>
+                {% endfor %}
+                
+                
+                
+            
+            </table>
+            <br><BR>
+            </div>
+            <br><br><br><br><BR>
+<div class="skill">
+        <br><br><br><br><BR>
+    <h4 align="center"><font color="beige" size="5pt">SKILL SET</font></h4>
+    <br><br><br><br><BR>
+                <table id=skill1 style="width:33%">
+    
+                        <tr>
+                            <th>EID={{emp1}}</th>  
+                        </tr>
+                        {% for row1 in  result1_3%}
+                        <tr>
+                            
+                            <td> {{ row1.skill_name }}</td>
+                            
+                        </tr>
+                        {% endfor %}
+                        
+                       
+                        
+                    
+                    </table>
+                    
+<table id=skill2 style="width:33%">
+                            <tr>
+                                
+                                <th>EID={{emp2}}</th>
+
+                            </tr>
+                            {% for row1 in  result2_3%}
+                            <tr>
+                                
+                                <td> {{ row1.skill_name }}</td>
+                                
+                            </tr>
+                            {% endfor %}
+                            
+                        </table>
+                        <table id=skill3 style="width:33%">
+                                <tr>
+                                    
+                                    <th>EID={{emp3}}</th>
+    
+                                </tr>
+                                {% for row1 in  result3_3%}
+                                <tr>
+                                    
+                                    <td> {{ row1.skill_name }}</td>
+                                    
+                                </tr>
+                                {% endfor %}
+                                
+                            </table>
+                        </div>
+
+                        <br><br><br><br><BR>
+                            <br><br><br>
+<form action="/login" method="POST" >
+    <input type="submit" value="Go to home page" /> 
+     <input type="hidden" value="root" name="username"></input>
+     <input type="hidden" value="root" name="password"></input></form>
+      <br/>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<html>
+       
+    <head >
+        <style>
+            .def{
+      background-image:url("/static/black_bg.jpg");
+      
+      background-size:cover;
+      background-position:top;
+     
+    
+    }
+    .h{
+      color: whitesmoke;
+      font-family: cursive;
+     
+      font-size: 200%;
+    }
+    .logo{
+      margin: 10px 50px;
+      height: 60px;
+      float:left;
+    
+    }
+    #e1{
+      border-radius: 2rem;
+      padding: 7px 10px;
+      width: 400px;
+    }
+    #l{
+      color: rgb(238, 238, 188)
+    }
+    
+    #sl{
+      color:#fff;
+      padding:5px 30px;
+      border:none;
+      outline: none;
+     border-radius: 2rem;
+      font-size:25px;
+      font-family:'Times New Roman', Times, serif;
+      color:black;
+      text-shadow:-2px 2px 0 rgba(0,0,0,0.2);
+      font-weight:400;
+      transition:all .1s linear;
+      background:linear-gradient(to bottom, rgb(168, 167, 82));
+     
+      
+      
+     }
+     .dbms5{
+      position:relative;
+      top:60px;
+    }
+        </style>
+
+    
+    <h1 ><div class ="h">Comparing Employees</div></h1>
+    </head>
+    
+    <body class="def">
+        <header class ="def">
+            <div align ="center" class ="dbms5">
+        
+        <form action="/comp_result" method="POST">
+       <p id ="l"></p> <input id="e1"type="text" placeholder="employee1" name="employee1"></input>
+        <input id="e1" type="text" placeholder="employee2" name="employee2"></input>
+        <input id="e1"type="text" placeholder="employee3" name="employee3"></input> </p>
+        <br><br><br><bR>
+        <p id="sl" ><input id="e1" type="submit" value="compare"></input></p>
+
+    </form>
+    </div>
+    </header>
+    </body>
+
+</html>

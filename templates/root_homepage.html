@@ -1,0 +1,96 @@
+<html>
+    <head>
+            <style>
+                    #bt1{
+                    border-radius: 2rem;
+                    font-size: 25px;
+                    letter-spacing: 2px;
+                    margin: 5px;
+                    padding: 7px 10px;
+                    fill-opacity: 0.77;
+                    border: none ; 
+                    color :rgb(19, 11, 1);
+                    background-color: rgb(245, 241, 236);
+                    opacity: 0.4;
+                  
+                  }
+                  #bt3{
+                    border-radius: 2rem;
+                    font-size: 25px;
+                    letter-spacing: 2px;
+                    margin: 5px;
+                    padding: 7px 10px;
+                    fill-opacity: 0.77;
+                    border: none ; 
+                    color :rgb(19, 11, 1);
+                    background-color: rgb(230, 208, 16);
+                    opacity: 0.2;
+                  
+                  }#bt2{
+                    border-radius: 2rem;
+                    font-size: 25px;
+                    letter-spacing: 2px;
+                    margin: 5px;
+                    padding: 7px 10px;
+                    fill-opacity: 0.77;
+                    border: none ; 
+                    color :rgb(19, 11, 1);
+                    background-color: rgb(238, 234, 230);
+                    opacity: 1;
+                  
+                  }
+                  #a{
+                      background-image:url("/static/b1.jpg");
+                      height: 100vh;
+                    background-size:cover;
+                    background-position:top;
+                  }
+                  #b{
+                      color:  rgb(236, 154, 59);
+                      font-family: cursive;
+                  }
+                  #x{
+                      font-family: cursive;
+                      color:azure;
+                  
+                  }
+                  
+                      </style>
+    </head>
+    <body class="div">
+<div id="a" align="center">
+    <br><br><BR>
+<h1 align ='center'>  <text id='b'>SYSTEM ADMINISTRATION</text  ></h1>
+                <br/>
+                <br/>
+                <form  action="/new_emp"><input id="bt1" type="submit" value="Enter new employee" /> 
+                </form>
+                <br>
+                <form  action="/update"><input id="bt1" type="submit" value="Update Employee" /> 
+                </form>
+                <form  action="/update_emp"></form>
+                 <br>
+                 <form  action="/add_to_proj"><input id="bt1" type="submit" value="Add Employee to Project" /> 
+                </form>
+                <br>
+                <form  action="/attend" method="POST"><input id="bt1" type="submit" value="Check Attendance" /> 
+                <input id="bt2" type="text" name="emp" placeholder="employee_id"></input>
+                </form>
+                 <br/> 
+                <form action="/compare"><input id="bt1"type="submit" value="Compare Employees" /> 
+                </form>
+                
+                <br />
+                <form  action="/emp_deet"><input id="bt1" type="submit" value="See all Employees" /> </form>    
+                <br>
+                <form  action="/emp_pro"><input id="bt1" type="submit" value="Project and employee" /> </form>    
+                <form action="/home"  >
+                    <input align="center" id="bt3" type="submit" value="LOGOUT" /> 
+                     <input type="hidden" value="root" name="username"></input>
+                     <input type="hidden" value="root" name="password"></input></form>
+                      <br/> 
+                    
+               
+            </div>
+            </body>
+</html>

@@ -1,0 +1,69 @@
+<html>
+    <head>
+            <style>
+                    #bt1{
+                      border-radius: 2rem;
+                      font-size: 12px;
+                      letter-spacing: 2px;
+                      margin: 5px;
+                      padding: 7px 10px;
+                      fill-opacity: 0.77;
+                      border: none ; 
+                      color :rgb(19, 11, 1);
+                      background-color: rgb(245, 241, 236);
+                      opacity: 0.4;
+                    
+                    }
+                    .a{
+                      
+                        background-image:url("/static/b5.jpg");
+                        background-size:cover;
+                        height: 100%;
+                    }
+                    #b{
+                        color:  rgb(236, 154, 59);
+                        font-family: 'Times New Roman', Times, serif;
+                    }
+                    #x{
+                        font-family:initial;
+                        color:azure;
+                        font-size: 25pt;
+                    
+                    }
+                    #bt2{
+border-radius: 2rem;
+font-size: 10px;
+letter-spacing: 2px;
+margin: 5px;
+padding: 7px 10px;
+fill-opacity: 0.77;
+border: none ; 
+color :rgb(19, 11, 1);
+background-color: rgb(238, 234, 230);
+opacity: 1;
+
+}
+                    </style>
+    </head>
+            <div class="a">
+<h1 align ='center'>  <text id='x' >ADD NEW EMPLOYEE</text  ></h1>
+ 
+        <form id="x"action="/reg" method="POST" name="myform"> 
+                <h3>Enter details</h3>
+                Employee ID : <input type="numeric"  name="id_"  />
+                <br></br> First Name : <input type="text" name="fname" />
+                <br></br> Middle Name : <input type="text"  name="mname" />
+                <br></br> Last Name : <input type="text"  name="lname" />
+                <br></br> Email : <input type="email"  name="email"/>
+                <br></br> Gender: <input type="text" name="gender" />
+                <br></br> Blood Group: <input type="text" name="bgroup" />
+                
+<br><br>
+                <input id="bt1" type="submit" value="AddRecord" />
+                
+                    
+                </form>
+            </div>
+       
+</html>
+

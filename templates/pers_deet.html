@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+td, th {
+    border: 1px solid black;
+    text-align: left;
+    padding: 80px;
+}
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+#f{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:rgb(17, 28, 32);
+          background-image:url("/static/pers.jpg");
+          border-left: 200pt;
+          background-size: 100%;
+          background-position:top;
+          font-size: 22px;
+          font-weight:600;
+          padding: 200pt;
+
+
+}
+
+
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Employees</title>
+</head>
+<body id="f" align="left"> 
+    <div class="box"></div> 
+        {% if result %}     
+   
+    {% for row in result %}
+       Employee ID : {{row.employee_id}}<br>
+        Name : {{ row.first_name }}<br>
+        
+        {{ row.last_name }}
+        email :{{ row.email }}<br>
+      Qualification: {{ row.qualification }}<br>
+        Phone number :{{ row.phone_number }}<br>
+       Project :{{ row.project_name }}<br>
+    
+    {% endfor %}
+{% endif %}
+</div>
+
+</body>
+</html>
